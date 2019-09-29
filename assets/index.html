@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <div >
+    <div class="info" >
         <h1 id="title" style="text-align: center"></h1>
         <h2 id= "rules"></h2>
         <h3 id="options"></h3>
@@ -37,24 +37,24 @@
             divOne.textContent = "Word Guessing Game";
 
             var h2 = document.getElementById("rules");
-            h2.textContent = "The compter will generate a word. It is up to you to try and guess the word" + "If you guess a letter correctly your score will go up and you will move onto the next letter.";
+            h2.textContent = "The compter will generate a word. It is up to you to try and guess the word" + " If you guess a letter correctly your score will go up and you will move onto the next letter.";
 
 
 
         }
 
-       var mammalOpts = ["bear", "human", "platypus", "Lion", "tiger"];
-     
-
-       
-       
-       var userText = document.getElementById("userText");
-        var mammalOpts = ["bear", "human", "platypus", "Lion", "tiger"];
-     
-            var computerChoice = Math.floor(Math.random() * mammalOpts.length);
-            console.log(computerChoice);
              document.onkeyup = function(event) {
-                userText.textContent = event.key; 
+                
+            var userText = document.getElementById("userText");
+
+                userText.textContent = event.key;
+                var mammalOpts = ["bear", "human", "platypus", "Lion", "tiger"];
+     
+                var computerChoice = Math.floor(Math.random(3) * mammalOpts.length);
+                 for (var i=0; i < mammalOpts.length, i++;){
+                console.log(computerChoice);}
+
+            
                 if (userText===computerChoice){
                     document.getElementById("winTally");
                     winTally.textContent= "Total wins: " + wins++;
@@ -65,8 +65,10 @@
                     document.getElementById("lossTally");
                     lossTally.textContent= "Total Losses: " + losses++;
 
-                }
+                }               
 };
+
+
 
       
 
