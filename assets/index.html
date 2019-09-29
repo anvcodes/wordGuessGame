@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css" type="css"></link>
+    <link rel="javascript" href="game.js" type="text/javascript">
+    <title>Document</title>
+</head>
+<body>
+
+    <div >
+        <h1 id="title" style="text-align: center"></h1>
+        <h2 id= "rules"></h2>
+        <h3 id="options"></h3>
+        <p id="scoreTally"> your score : </p>
+        <p id="winTally">total wins : </p>
+        <p id="lossTally"> total losses: </p>
+        <p > your guess :<span  id ="userText">    </span> </p>
+    </div>
+
+
+
+    <script type="text/javascript">
+
+        var wins= 0;
+        var losses = 0;
+        var totalscore = 0;
+
+
+        alert("are you ready to test your guessing abilities?");
+        
+
+        if(true) {
+            var divOne = document.getElementById("title");
+            divOne.textContent = "Word Guessing Game";
+
+            var h2 = document.getElementById("rules");
+            h2.textContent = "The compter will generate a word. It is up to you to try and guess the word" + "If you guess a letter correctly your score will go up and you will move onto the next letter.";
+
+
+
+        }
+
+       var mammalOpts = ["bear", "human", "platypus", "Lion", "tiger"];
+     
+
+       
+       
+       var userText = document.getElementById("userText");
+        var mammalOpts = ["bear", "human", "platypus", "Lion", "tiger"];
+     
+            var computerChoice = Math.floor(Math.random() * mammalOpts.length);
+            console.log(computerChoice);
+             document.onkeyup = function(event) {
+                userText.textContent = event.key; 
+                if (userText===computerChoice){
+                    document.getElementById("winTally");
+                    winTally.textContent= "Total wins: " + wins++;
+                    textContent= "your score: " + totalscore++;
+
+                } 
+                else{
+                    document.getElementById("lossTally");
+                    lossTally.textContent= "Total Losses: " + losses++;
+
+                }
+};
+
+      
+
+        
+    
+
+
+    
+
+        
+
+
+
+
+
+       // }
+
+       // var compChoice = [
+          //  "lion",
+            //"tiger",
+            //"bear",
+            //"human",
+            //"platypus"
+       // ];
+    
+        //document.onkeyup = function(){
+           // document.getElementById()
+        //}
+    
+    
+    
+    
+    
+    
+    
+    
+    </script>
+    
+</body>
+</html>
